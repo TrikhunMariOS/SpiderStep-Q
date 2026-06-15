@@ -117,6 +117,7 @@ MY_Final/
 4. ไม่ต้องแก้ path ของ USD — `robot/spider_robot_cfg.py` ใช้ **relative path** หาไฟล์ USD จากตำแหน่งของตัวเองอยู่แล้ว ขอแค่โฟลเดอร์ `robot/Robot_USD_v.1.02Final/` อยู่ครบ (ห้ามลบ)
 
 ---
+<img width="590" height="118" alt="Screenshot 2026-06-15 174613 - Copy" src="https://github.com/user-attachments/assets/995637aa-2d90-4d4e-b6f5-636d966faeb4" />
 
 ## วิธีรัน
 
