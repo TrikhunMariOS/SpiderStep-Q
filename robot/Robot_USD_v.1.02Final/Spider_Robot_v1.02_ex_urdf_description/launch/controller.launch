@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find Spider_Robot_v1.02_ex_urdf_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="Spider_Robot_v1.02_ex_urdf" args="femur_FL_joint_position_controller tibia_FL_joint_position_controller tibia_FR_joint_position_controller femur_FR_joint_position_controller femur_RR_joint_position_controller femur_RL_joint_position_controller tibia_RR_joint_position_controller tibia_RL_joint_position_controller coxa_FL_joint_position_controller coxa_FR_joint_position_controller coxa_RR_joint_position_controller coxa_RL_joint_position_controller FOOT_FL_joint_position_controller FOOT_RR_joint_position_controller FOOT_FR_joint_position_controller FOOT_RL_joint_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/Spider_Robot_v1.02_ex_urdf/joint_states"/>
+</node>
+
+</launch>

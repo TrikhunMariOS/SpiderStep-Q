@@ -1,0 +1,71 @@
+Spider_Robot_v1.02_ex_urdf_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  femur_FL_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: femur_FL_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  tibia_FL_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: tibia_FL_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  tibia_FR_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: tibia_FR_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  femur_FR_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: femur_FR_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  femur_RR_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: femur_RR_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  femur_RL_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: femur_RL_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  tibia_RR_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: tibia_RR_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  tibia_RL_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: tibia_RL_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  coxa_FL_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: coxa_FL_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  coxa_FR_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: coxa_FR_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  coxa_RR_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: coxa_RR_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  coxa_RL_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: coxa_RL_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  FOOT_FL_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: FOOT_FL_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  FOOT_RR_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: FOOT_RR_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  FOOT_FR_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: FOOT_FR_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  FOOT_RL_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: FOOT_RL_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}

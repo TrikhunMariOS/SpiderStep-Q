@@ -1,0 +1,488 @@
+<?xml version="1.0" ?>
+<robot name="Spider_Robot_v1.02_ex_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Spider_Robot_v1.02_ex_urdf_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Spider_Robot_v1.02_ex_urdf_description)/urdf/Spider_Robot_v1.02_ex_urdf.trans" />
+<xacro:include filename="$(find Spider_Robot_v1.02_ex_urdf_description)/urdf/Spider_Robot_v1.02_ex_urdf.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0001671605746159186 -5.739516463463984e-06 0.012774515445516908" rpy="0 0 0"/>
+    <mass value="1.0"/>
+    <inertia ixx="0.001089" iyy="0.001687" izz="0.002662" ixy="-4e-07" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Femur_FL_1">
+  <inertial>
+    <origin xyz="-0.023828490338501693 -0.018747869373246295 0.011268331131225225" rpy="0 0 0"/>
+    <mass value="0.15"/>
+    <inertia ixx="3.8e-05" iyy="3.8e-05" izz="5.8e-05" ixy="-2.6e-05" iyz="1.3e-05" ixz="1.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.07867 0.055075 0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Femur_FL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.07867 0.055075 0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Femur_FL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Tibia_FL_1">
+  <inertial>
+    <origin xyz="-0.01101084874714603 -0.011796301974562731 -0.034647877838889604" rpy="0 0 0"/>
+    <mass value="0.10"/>
+    <inertia ixx="0.000111" iyy="0.000115" izz="3.9e-05" ixy="-3e-06" iyz="-2.3e-05" ixz="-3.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.128704 0.090109 -0.015231" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Tibia_FL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.128704 0.090109 -0.015231" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Tibia_FL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Tibia_FR_1">
+  <inertial>
+    <origin xyz="-0.011010848747146251 0.011796301974563106 -0.03464787783888998" rpy="0 0 0"/>
+    <mass value="0.10"/>
+    <inertia ixx="0.000111" iyy="0.000115" izz="3.9e-05" ixy="3e-06" iyz="2.3e-05" ixz="-3.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.128704 -0.090109 -0.015231" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Tibia_FR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.128704 -0.090109 -0.015231" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Tibia_FR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Femur_FR_1">
+  <inertial>
+    <origin xyz="-0.02382849011059268 0.018747869175559456 0.011268331020690223" rpy="0 0 0"/>
+    <mass value="0.15"/>
+    <inertia ixx="3.8e-05" iyy="3.8e-05" izz="5.8e-05" ixy="2.6e-05" iyz="-1.3e-05" ixz="1.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.07867 -0.055075 0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Femur_FR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.07867 -0.055075 0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Femur_FR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Femur_RR_1">
+  <inertial>
+    <origin xyz="0.023828490338501512 0.01874786937324642 0.011268331131225176" rpy="0 0 0"/>
+    <mass value="0.15"/>
+    <inertia ixx="3.8e-05" iyy="3.8e-05" izz="5.8e-05" ixy="-2.6e-05" iyz="-1.3e-05" ixz="-1.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.07867 -0.055075 0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Femur_RR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.07867 -0.055075 0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Femur_RR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Femur_RL_1">
+  <inertial>
+    <origin xyz="0.02382849011059264 -0.018747869175559498 0.011268331020690216" rpy="0 0 0"/>
+    <mass value="0.15"/>
+    <inertia ixx="3.8e-05" iyy="3.8e-05" izz="5.8e-05" ixy="2.6e-05" iyz="1.3e-05" ixz="-1.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.07867 0.055075 0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Femur_RL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.07867 0.055075 0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Femur_RL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Tibia_RR_1">
+  <inertial>
+    <origin xyz="0.011010848747146113 0.011796301974563037 -0.034647877838889694" rpy="0 0 0"/>
+    <mass value="0.10"/>
+    <inertia ixx="0.000111" iyy="0.000115" izz="3.9e-05" ixy="-3e-06" iyz="2.3e-05" ixz="3.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.128704 -0.090109 -0.015231" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Tibia_RR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.128704 -0.090109 -0.015231" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Tibia_RR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Tibia_RL_1">
+  <inertial>
+    <origin xyz="0.011010848747146362 -0.011796301974563175 -0.034647877838889854" rpy="0 0 0"/>
+    <mass value="0.10"/>
+    <inertia ixx="0.000111" iyy="0.000115" izz="3.9e-05" ixy="3e-06" iyz="-2.3e-05" ixz="3.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.128704 0.090109 -0.015231" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Tibia_RL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.128704 0.090109 -0.015231" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Tibia_RL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Coxa_FL_1">
+  <inertial>
+    <origin xyz="-0.008775011946950774 -0.00737215191369707 -0.010647678142311823" rpy="0 0 0"/>
+    <mass value="0.08"/>
+    <inertia ixx="1.6e-05" iyy="1.9e-05" izz="3e-05" ixy="-1.1e-05" iyz="-1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.05 0.035 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Coxa_FL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.05 0.035 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Coxa_FL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Coxa_FR_1">
+  <inertial>
+    <origin xyz="-0.008775011946982034 0.007372151913830033 -0.01064767814231183" rpy="0 0 0"/>
+    <mass value="0.08"/>
+    <inertia ixx="1.6e-05" iyy="1.9e-05" izz="3e-05" ixy="1.1e-05" iyz="1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.05 -0.035 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Coxa_FR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.05 -0.035 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Coxa_FR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Coxa_RR_1">
+  <inertial>
+    <origin xyz="0.00877501194695074 0.007372151913697063 -0.010647678142311816" rpy="0 0 0"/>
+    <mass value="0.08"/>
+    <inertia ixx="1.6e-05" iyy="1.9e-05" izz="3e-05" ixy="-1.1e-05" iyz="1e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.05 -0.035 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Coxa_RR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.05 -0.035 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Coxa_RR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Coxa_RL_1">
+  <inertial>
+    <origin xyz="0.008775011946982034 -0.007372151913830033 -0.010647678142311826" rpy="0 0 0"/>
+    <mass value="0.08"/>
+    <inertia ixx="1.6e-05" iyy="1.9e-05" izz="3e-05" ixy="1.1e-05" iyz="-1e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.05 0.035 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Coxa_RL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.05 0.035 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Coxa_RL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Foot_FL_1">
+  <inertial>
+    <origin xyz="-0.03713054367101011 -0.03744373682706263 -0.036737391517129625" rpy="0 0 0"/>
+    <mass value="0.03"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.122157 0.075301 0.029599" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Foot_FL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.122157 0.075301 0.029599" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Foot_FL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Foot_RR_1">
+  <inertial>
+    <origin xyz="0.03713054367101011 0.03744373682706263 -0.036737391517129625" rpy="0 0 0"/>
+    <mass value="0.03"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.122157 -0.075301 0.029599" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Foot_RR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.122157 -0.075301 0.029599" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Foot_RR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Foot_FR_1">
+  <inertial>
+    <origin xyz="-0.03713054367101011 0.03744373682706263 -0.036737391517129625" rpy="0 0 0"/>
+    <mass value="0.03"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.122157 -0.075301 0.029599" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Foot_FR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.122157 -0.075301 0.029599" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Foot_FR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Foot_RL_1">
+  <inertial>
+    <origin xyz="0.03713054367101011 -0.03744373682706263 -0.036737391517129625" rpy="0 0 0"/>
+    <mass value="0.03"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.122157 0.075301 0.029599" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Foot_RL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.122157 0.075301 0.029599" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Spider_Robot_v1.02_ex_urdf_description/meshes/Foot_RL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="femur_FL_joint" type="revolute">
+  <origin xyz="-0.02867 -0.020075 -0.012" rpy="0 0 0"/>
+  <parent link="Coxa_FL_1"/>
+  <child link="Femur_FL_1"/>
+  <axis xyz="-0.573576 0.819152 0.0"/>
+  <limit upper="1.396263" lower="-1.919862" effort="100" velocity="100"/>
+</joint>
+
+<joint name="tibia_FL_joint" type="revolute">
+  <origin xyz="-0.050034 -0.035034 0.022231" rpy="0 0 0"/>
+  <parent link="Femur_FL_1"/>
+  <child link="Tibia_FL_1"/>
+  <axis xyz="-0.573576 0.819152 0.0"/>
+  <limit upper="1.919862" lower="-1.308997" effort="100" velocity="100"/>
+</joint>
+
+<joint name="tibia_FR_joint" type="revolute">
+  <origin xyz="-0.050034 0.035034 0.022231" rpy="0 0 0"/>
+  <parent link="Femur_FR_1"/>
+  <child link="Tibia_FR_1"/>
+  <axis xyz="-0.573576 -0.819152 0.0"/>
+  <limit upper="1.308997" lower="-1.919862" effort="100" velocity="100"/>
+</joint>
+
+<joint name="femur_FR_joint" type="revolute">
+  <origin xyz="-0.02867 0.020075 -0.012" rpy="0 0 0"/>
+  <parent link="Coxa_FR_1"/>
+  <child link="Femur_FR_1"/>
+  <axis xyz="-0.573576 -0.819152 0.0"/>
+  <limit upper="1.919862" lower="-1.396263" effort="100" velocity="100"/>
+</joint>
+
+<joint name="femur_RR_joint" type="revolute">
+  <origin xyz="0.02867 0.020075 -0.012" rpy="0 0 0"/>
+  <parent link="Coxa_RR_1"/>
+  <child link="Femur_RR_1"/>
+  <axis xyz="0.573576 -0.819152 0.0"/>
+  <limit upper="1.396263" lower="-1.919862" effort="100" velocity="100"/>
+</joint>
+
+<joint name="femur_RL_joint" type="revolute">
+  <origin xyz="0.02867 -0.020075 -0.012" rpy="0 0 0"/>
+  <parent link="Coxa_RL_1"/>
+  <child link="Femur_RL_1"/>
+  <axis xyz="0.573576 0.819152 0.0"/>
+  <limit upper="1.919862" lower="-1.396263" effort="100" velocity="100"/>
+</joint>
+
+<joint name="tibia_RR_joint" type="revolute">
+  <origin xyz="0.050034 0.035034 0.022231" rpy="0 0 0"/>
+  <parent link="Femur_RR_1"/>
+  <child link="Tibia_RR_1"/>
+  <axis xyz="0.573576 -0.819152 -0.0"/>
+  <limit upper="1.919862" lower="-1.308997" effort="100" velocity="100"/>
+</joint>
+
+<joint name="tibia_RL_joint" type="revolute">
+  <origin xyz="0.050034 -0.035034 0.022231" rpy="0 0 0"/>
+  <parent link="Femur_RL_1"/>
+  <child link="Tibia_RL_1"/>
+  <axis xyz="0.573576 0.819152 0.0"/>
+  <limit upper="1.308997" lower="-1.919862" effort="100" velocity="100"/>
+</joint>
+
+<joint name="coxa_FL_joint" type="revolute">
+  <origin xyz="-0.05 -0.035 0.005" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Coxa_FL_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+  <limit upper="0.872665" lower="-1.308997" effort="100" velocity="100"/>
+</joint>
+
+<joint name="coxa_FR_joint" type="revolute">
+  <origin xyz="-0.05 0.035 0.005" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Coxa_FR_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+  <limit upper="1.308997" lower="-0.872665" effort="100" velocity="100"/>
+</joint>
+
+<joint name="coxa_RR_joint" type="revolute">
+  <origin xyz="0.05 0.035 0.005" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Coxa_RR_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+  <limit upper="0.872665" lower="-1.308997" effort="100" velocity="100"/>
+</joint>
+
+<joint name="coxa_RL_joint" type="revolute">
+  <origin xyz="0.05 -0.035 0.005" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Coxa_RL_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+  <limit upper="1.308997" lower="-0.872665" effort="100" velocity="100"/>
+</joint>
+
+<joint name="FOOT_FL_joint" type="fixed">
+  <origin xyz="0.006547 0.014808 -0.04483" rpy="0 0 0"/>
+  <parent link="Tibia_FL_1"/>
+  <child link="Foot_FL_1"/>
+  <!-- <axis xyz="-0.346189 -0.242404 -0.906308"/> -->
+</joint>
+
+<joint name="FOOT_RR_joint" type="fixed">
+  <origin xyz="-0.006547 -0.014808 -0.04483" rpy="0 0 0"/>
+  <parent link="Tibia_RR_1"/>
+  <child link="Foot_RR_1"/>
+  <!-- <axis xyz="0.346189 0.242404 -0.906308"/> -->
+</joint>
+
+<joint name="FOOT_FR_joint" type="fixed">
+  <origin xyz="0.006547 -0.014808 -0.04483" rpy="0 0 0"/>
+  <parent link="Tibia_FR_1"/>
+  <child link="Foot_FR_1"/>
+  <!-- <axis xyz="-0.346189 0.242404 -0.906308"/> -->
+</joint>
+
+<joint name="FOOT_RL_joint" type="fixed">
+  <origin xyz="-0.006547 0.014808 -0.04483" rpy="0 0 0"/>
+  <parent link="Tibia_RL_1"/>
+  <child link="Foot_RL_1"/>
+  <!-- <axis xyz="0.346189 -0.242404 -0.906308"/> -->
+</joint>
+
+</robot>

@@ -1,0 +1,6 @@
+isaaclab.bat -p scripts/MY_Final/rl/train_residual.py --task Isaac-Velocity-Flat-Spider-Residual-v0 --num_envs 4096 --headless
+
+isaaclab.bat -p scripts/MY_Final/rl/play_residual.py --task Isaac-Velocity-Flat-Spider-Residual-Play-v0 --checkpoint logs/rsl_rl/spider_residual_flat/<run>/model_<n>.pt --num_envs 16
+
+
+isaaclab.bat -p scripts/MY_Final/rl/train_residual.py --task Isaac-Velocity-Flat-Spider-Residual-v0 --num_envs 1024
