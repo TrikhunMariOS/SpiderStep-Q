@@ -124,13 +124,23 @@ MY_Final/
 รันทุกคำสั่งจากโฟลเดอร์ root ของ Isaac Lab ผ่าน `isaaclab.bat -p ...`
 
 ```bat
+:: Main model ที่เทรนเอาไว้แล้ว
+:: เล่นเช็ค point
+isaaclab.bat -p scripts/MY_Final/rl/play_residual.py --task Isaac-Velocity-Rough-Spider-Residual-Play-v0 --num_envs 16 --checkpoint scripts/MY_Final/Best_model_1800/model_1800.pt
+
+:: ขับเอง
+isaaclab.bat -p scripts/MY_Final/rl/play_drive.py --checkpoint scripts/MY_Final/Best_model_1800/model_1800.pt
+
+
+:: อื่นๆ ------------------------------------------------------------------------
+
 ::  ตรวจสอบ IK (ไม่เปิดแอป) — ยืนยันว่า gait_torch ตรงกับ numpy ref
 isaaclab.bat -p scripts/MY_Final/rl/test_ik_validation.py
 
 ::  gait อย่างเดียว (residual = 0) — baseline reference ที่ควรเดินได้
 isaaclab.bat -p scripts/MY_Final/rl/play_gait_only.py --num_envs 16
 
-::  ฝึกบนพื้นราบ (ฝึกอันนี้ก่อน)
+::  ฝึกบนพื้นราบ
 isaaclab.bat -p scripts/MY_Final/rl/train_residual.py ^
 --task Isaac-Velocity-Flat-Spider-Residual-v0 --num_envs 4096 --headless
 
