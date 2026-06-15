@@ -1,5 +1,7 @@
 # SpiderStep-Q
 ### Reinforcement-Learning-Enhanced Locomotion for a Spider-Inspired Quadruped Robot
+<img width="1051" height="554" alt="Screenshot 2026-06-12 022948" src="https://github.com/user-attachments/assets/2af95ee6-be73-4289-ae81-c76be83e7f15" />
+
 
 โครงงานนี้เป็นโครงงานที่ถูกพัฒนาขึ้นเพื่อศึกษาค้นคว้าเกี่ยวกับ Reinforcement Learning (RL) สำหรับควบคุมการเคลื่อนไหวหุ่นยนต์รูปแบบแมงมุม 4 ขา(3 DOF) โดยมีการใช้ gait เป็นพื้นฐาน
 
